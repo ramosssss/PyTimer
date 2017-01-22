@@ -35,22 +35,6 @@ def start():
 		altime = 60 * mins + time.time()
 		tt.config(state = "disabled")
 
-master = Tk()
-
-f1 = Frame(master)
-f1.pack(side = TOP, fill = Y)
-f2 = Frame(master)
-f2.pack(side = TOP, fill = Y)
-
-tt = Entry(f2, width = 6)
-tt.pack(side = LEFT)
-tt.delete(0, END)
-
-but = Button(f1, text = "  Start  ", command = start)
-but.pack(side = LEFT)
-
-master.title("PyTimer")
-
 def showtime():
 	curtime = max(0, int(altime - time.time()))
 
@@ -67,6 +51,22 @@ def showtime():
 		master.after(1000, showtime)
 	else:
 		master.after(50, play_alarm)
+
+master = Tk()
+
+f1 = Frame(master)
+f1.pack(side = TOP, fill = Y)
+f2 = Frame(master)
+f2.pack(side = TOP, fill = Y)
+
+tt = Entry(f2, width = 6)
+tt.pack(side = LEFT)
+tt.delete(0, END)
+
+but = Button(f1, text = "  Start  ", command = start)
+but.pack(side = LEFT)
+
+master.title("PyTimer")
 
 master.after(1000, showtime)
 
