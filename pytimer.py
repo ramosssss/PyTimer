@@ -20,7 +20,7 @@ def play_alarm():
 	sound.playFile(wav)
 	master.after(1200, play_alarm)
 
-def start():
+def start(s = ''):
 	global run, curtime, altime
 
 	if run and curtime < 1:
@@ -65,6 +65,8 @@ f2.pack(side = TOP, fill = Y)
 tt = Entry(f2, width = 6)
 tt.pack(side = LEFT)
 tt.delete(0, END)
+tt.bind('<Return>', start)
+tt.focus()
 
 but = Button(f1, text = "  Start  ", command = start)
 but.pack(side = LEFT)
