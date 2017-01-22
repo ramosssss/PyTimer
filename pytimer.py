@@ -13,6 +13,7 @@ import play_wav
 wav = "Question.wav"
 sound = play_wav.Sound()
 run = False
+curtime = 10
 altime = time.time() + 1e8
 
 def play_alarm():
@@ -20,7 +21,7 @@ def play_alarm():
 	master.after(1200, play_alarm)
 
 def start():
-	global run, altime
+	global run, curtime, altime
 
 	if run and curtime < 1:
 		sys.exit(0)
@@ -36,6 +37,8 @@ def start():
 		tt.config(state = "disabled")
 
 def showtime():
+	global curtime
+
 	curtime = max(0, int(altime - time.time()))
 
 	if run:
