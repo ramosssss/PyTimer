@@ -18,6 +18,11 @@ altime = time.time() + 1e8
 
 def play_alarm():
 	sound.playFile(wav)
+	curtime = time.time() - altime
+	tt.config(state = "normal")
+	tt.delete(0, END)
+	tt.insert(0, "−%u:%02u" % (curtime // 60, curtime % 60))
+	tt.config(state="disabled")
 	master.after(1200, play_alarm)
 
 def start(s = ''):
@@ -32,9 +37,9 @@ def start(s = ''):
 		try:
 			mins = int(tt.get())
 		except:
-			mins = 1
+			mins = 1	# default: one-minute countdown
 		altime = 60 * mins + time.time()
-		tt.config(state = "disabled")
+		tt.config(justify = "right", state = "disabled")
 
 def showtime():
 	global curtime
@@ -62,7 +67,7 @@ f1.pack(side = TOP, fill = Y)
 f2 = Frame(master)
 f2.pack(side = TOP, fill = Y)
 
-tt = Entry(f2, width = 6)
+tt = Entry(f2, width = 8)
 tt.pack(side = LEFT)
 tt.delete(0, END)
 tt.bind('<Return>', start)
