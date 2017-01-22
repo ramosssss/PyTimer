@@ -42,8 +42,6 @@ f1 = Frame(master)
 f1.pack(side = TOP, fill = Y)
 f2 = Frame(master)
 f2.pack(side = TOP, fill = Y)
-f3 = Frame(master)
-f3.pack(side = BOTTOM, fill = Y)
 
 tt = Entry(f2, width = 6)
 tt.pack(side = LEFT)
@@ -71,7 +69,7 @@ def showtime():
 	if curtime > 0:
 		master.after(1000, showtime)
 	else:
-		play_alarm()
+		master.after(50, play_alarm)
 
 master.after(1000, showtime)
 
