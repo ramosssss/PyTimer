@@ -1,6 +1,8 @@
 #PyTimer, a simple egg (countdown) timer in Python/Tk
 
-![screenshot](https://github.com/mdoege/PyTimer/raw/master/screenshot.png "PyBrite screenshot")
+![screenshot](https://github.com/mdoege/PyTimer/raw/master/scr1.png "PyTimer screenshot")
+![screenshot](https://github.com/mdoege/PyTimer/raw/master/scr2.png "PyTimer screenshot")
+![screenshot](https://github.com/mdoege/PyTimer/raw/master/scr3.png "PyTimer screenshot")
 
 ##Usage
 
