@@ -34,11 +34,20 @@ def start(s = ''):
 	if not run:
 		run = True
 		but.config(background = "green")
-		try:
-			mins = int(tt.get())
-		except:
-			mins = 1	# default: one-minute countdown
-		altime = 60 * mins + time.time()
+		a = tt.get()
+		if ':' in a:	# input is HH:MM time
+			b = list(time.localtime())
+			b[3], b[4] = [int(x) for x in a.split(':')]
+			b[5] = 0
+			altime = time.mktime(tuple(b))
+			if altime < time.time():	# alarm time is tomorrow
+				altime += 24*60*60
+		else:		# input is minutes
+			try:
+				mins = int(a)
+			except:
+				mins = 1	# default: one-minute countdown
+			altime = 60 * mins + time.time()
 		tt.config(justify = "right", state = "disabled")
 
 def showtime():
