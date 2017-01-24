@@ -6,7 +6,7 @@
 
 ##Usage
 
-Enter either the number of minutes or a local time (in 24-hour format HH:MM) into the text entry widget, then press Return or click the Start button. When the countdown is over, the Start button turns into a Quit button.
+Enter either the number of minutes or a local time (in 24-hour HH:MM format) into the text entry widget, then press Return or click the Start button. When the countdown is over, the Start button turns into a Quit button.
 
 Note that the timer continues counting during the alarm so you can see how much time has passed since the alarm started.
 

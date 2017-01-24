@@ -3,7 +3,8 @@
 """
   Tkinter Python egg timer
 
-	Enter the number of minutes into the text entry and click Start
+	Enter the number of minutes (or the alarm time as HH:MM)
+	into the text entry and click the Start button
 """
 
 import sys, time
