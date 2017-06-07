@@ -1,10 +1,10 @@
-#PyTimer, a simple egg (countdown) timer in Python/Tk
+# PyTimer, a simple egg (countdown) timer in Python/Tk
 
 ![screenshot](https://github.com/mdoege/PyTimer/raw/master/scr1.png "PyTimer screenshot")
 ![screenshot](https://github.com/mdoege/PyTimer/raw/master/scr2.png "PyTimer screenshot")
 ![screenshot](https://github.com/mdoege/PyTimer/raw/master/scr3.png "PyTimer screenshot")
 
-##Usage
+## Usage
 
 Enter either the number of minutes or a local time (in 24-hour HH:MM format) into the text entry widget, then press Return or click the Start button. When the countdown is over, the Start button turns into a Quit button.
 
@@ -16,7 +16,7 @@ There is no way to reset, pause, or restart the timer (on purpose, so disabling 
 
 Note that the timer uses an absolute alarm time, so even if you suspend the system during the countdown for some time, it will not affect the alarm time. (This is different from a naive timer which would ignore time spent in suspend mode.)
 
-##Prerequisites
+## Prerequisites
 
 PyAudio:
 ```
